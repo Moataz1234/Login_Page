@@ -12,8 +12,8 @@ export default function App() {
       {index && <Loader />}
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<ProfilePage />}></Route>
-          <Route path="/login" element={<LoginPage />}></Route>
+          <Route path="/" element={<LoginPage />}></Route>
+          <Route path="/profile" element={<ProfilePage />}></Route>
           <Route path="*" element={<ErrorPage />}></Route>
         </Routes>
       </BrowserRouter>
