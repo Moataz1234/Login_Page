@@ -1,0 +1,192 @@
+.loginPage {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #0a0f2c;
+    padding: 20px;
+}
+
+.loginCard {
+    background-color: #0f1535;
+    padding: clamp(20px, 5vw, 40px);
+    border-radius: 10px;
+    width: 100%;
+    max-width: 450px;
+    color: white;
+    margin: 0 15px;
+}
+
+.loginCard h1 {
+    text-align: center;
+    margin-bottom: clamp(20px, 4vw, 30px);
+    font-size: clamp(24px, 5vw, 28px);
+}
+
+.socialLogin {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px;
+    flex-direction: row;
+}
+
+@media (max-width: 400px) {
+    .socialLogin {
+        flex-direction: column;
+    }
+}
+
+.socialLogin button {
+    flex: 1;
+    padding: clamp(8px, 2vw, 10px);
+    border-radius: 8px;
+    border: 1px solid #2a2f4c;
+    background: transparent;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: clamp(14px, 3vw, 16px);
+}
+
+.socialLogin button:hover {
+    background-color: #2a2f4c;
+}
+
+.socialLogin img {
+    width: clamp(16px, 4vw, 20px);
+    height: clamp(16px, 4vw, 20px);
+}
+
+.divider {
+    text-align: center;
+    position: relative;
+    margin: clamp(20px, 4vw, 30px) 0;
+}
+
+.divider::before,
+.divider::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 35%;
+    height: 1px;
+    background-color: #2a2f4c;
+}
+
+.divider::before {
+    left: 0;
+}
+
+.divider::after {
+    right: 0;
+}
+
+.divider span {
+    background-color: #0f1535;
+    padding: 0 10px;
+    color: #8b8fa3;
+    font-size: clamp(14px, 3vw, 16px);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(12px, 2.5vw, 15px);
+}
+
+form input[type="tel"],
+form input[type="password"] {
+    padding: clamp(12px, 2.5vw, 15px);
+    border-radius: 8px;
+    border: 1px solid #2a2f4c;
+    background: transparent;
+    color: white;
+    font-size: clamp(14px, 3vw, 16px);
+}
+
+form input::placeholder {
+    color: #8b8fa3;
+}
+
+.rememberForgot {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.rememberForgot label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #8b8fa3;
+    font-size: clamp(14px, 3vw, 16px);
+}
+
+.rememberForgot a {
+    color: #bf00ff;
+    text-decoration: none;
+    font-size: clamp(14px, 3vw, 16px);
+}
+
+.submitBtn {
+    background-color: #bf00ff;
+    color: white;
+    padding: clamp(12px, 2.5vw, 15px);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    font-size: clamp(14px, 3vw, 16px);
+    margin-top: 10px;
+}
+
+.submitBtn:hover {
+    background-color: #a100d6;
+}
+
+.signup {
+    text-align: center;
+    margin-top: clamp(15px, 3vw, 20px);
+    color: #8b8fa3;
+    font-size: clamp(14px, 3vw, 16px);
+}
+
+.signup a {
+    color: #bf00ff;
+    text-decoration: none;
+    margin-left: 5px;
+}
+
+/* Focus states for better accessibility */
+input:focus,
+button:focus {
+    outline: 2px solid #bf00ff;
+    outline-offset: 2px;
+}
+
+/* Custom checkbox styling */
+input[type="checkbox"] {
+    width: clamp(14px, 3vw, 16px);
+    height: clamp(14px, 3vw, 16px);
+    accent-color: #bf00ff;
+}
+
+/* Better touch targets for mobile */
+@media (max-width: 768px) {
+    .rememberForgot label,
+    .rememberForgot a,
+    .signup a {
+        padding: 5px 0;
+    }
+    
+    .submitBtn {
+        padding: clamp(15px, 3vw, 20px);
+    }
+}
